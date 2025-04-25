@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>CSTI Demo</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.js"></script>
+
+
+    <title>Search Form</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -22,39 +25,67 @@
         background-color: white;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
       }
 
       h1 {
         color: #20b2aa;
+        margin-bottom: 15px;
+      }
+
+      form {
+        margin-top: 20px;
       }
 
       label {
         display: block;
         margin-bottom: 5px;
         color: #008080;
+        text-align: left;
       }
 
       input[type="text"] {
-        width: 300px;
+        width: 100%;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        box-sizing: border-box;
       }
 
-      .message {
-        color: #008000;
-        margin-top: 20px;
+      input[type="submit"] {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #5f9ea0;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #4682b4;
       }
     </style>
   </head>
-  <body>
+  <body ng-app>
     <div class="container">
-      <h1>CSTI Demo</h1>
-      <label for="userInput">Enter text:</label>
-      <input type="text" id="userInput" ng-model="user" placeholder="Type something...">
-      <div class="message">
-        <h2>Hello {{ user }}</h2>
-      </div>
+      <h1>Search</h1>
+      <form action="" method="get">
+        <label for="nameInput">Enter text:</label>
+        <input
+          type="text"
+          id="nameInput"
+          name="search"
+          placeholder="Type something..."
+          required
+        />
+        <input type="submit" value="Search" />
+      </form>
+      <script>
+        // Reflect the 'name' query parameter into the page
+        const params = new URLSearchParams(window.location.search);
+        document.write(params.get('search') || '');
+      </script>
     </div>
   </body>
 </html>
