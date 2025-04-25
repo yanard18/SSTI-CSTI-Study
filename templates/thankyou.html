@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thanks for contact !</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #FFA500; /* Pastel Blue */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #20b2aa; /* Light SeaGreen */
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Thank you for your message!</h1>
+      <p>We will contact you soon at the email address: {{ email }}</p>
+    </div>
+  </body>
+</html>

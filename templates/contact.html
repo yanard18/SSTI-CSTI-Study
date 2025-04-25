@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>CSTI Demo</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <title>Contact Form</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -28,6 +26,10 @@
         color: #20b2aa;
       }
 
+      form {
+        margin-top: 20px;
+      }
+
       label {
         display: block;
         margin-bottom: 5px;
@@ -41,6 +43,20 @@
         border-radius: 5px;
       }
 
+      input[type="submit"] {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #5f9ea0;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #4682b4;
+      }
+
       .message {
         color: #008000;
         margin-top: 20px;
@@ -49,12 +65,16 @@
   </head>
   <body>
     <div class="container">
-      <h1>CSTI Demo</h1>
-      <label for="userInput">Enter text:</label>
-      <input type="text" id="userInput" ng-model="user" placeholder="Type something...">
-      <div class="message">
-        <h2>Hello {{ user }}</h2>
-      </div>
+      <h1>Contact Form</h1>
+      <p>
+        Fill out the form below to contact us.
+      </p>
+      <form method="post">
+        <label for="email">Email :</label>
+        <input type="text" name="email" id="email" required />
+        <br />
+        <input type="submit" value="Send" />
+      </form>
     </div>
   </body>
 </html>
