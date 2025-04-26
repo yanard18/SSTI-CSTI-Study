@@ -1,5 +1,8 @@
 from flask import Flask, request, render_template_string, render_template
+from jinja2.sandbox import SandboxedEnvironment
 app = Flask(__name__)
+
+env = SandboxedEnvironment()
 
 @app.route('/')
 def home():
