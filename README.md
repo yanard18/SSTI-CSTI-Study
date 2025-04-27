@@ -83,12 +83,12 @@ def ssti():
 ## 🏁 Quick Start
 
 1. **Clone the repo**  
-   ```bash
+```bash
 git clone https://github.com/yanard18/SSTI-CSTI-Study.git
 cd SSTI-CSTI-Study
 ```  
 2. **Create & activate a virtual environment**  
-   ```bash
+```bash
 python3 -m venv venv
 source venv/bin/activate
 ```  
