@@ -80,20 +80,6 @@ def ssti():
 
 ---
 
-## 🛠️ Requirements
-
-- Python 3.8+  
-- Flask  
-- Jinja2
-
-Install dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## 🏁 Quick Start
 
 1. **Clone the repo**  
@@ -107,11 +93,11 @@ python3 -m venv venv
 source venv/bin/activate
 ```  
 3. **Install dependencies**  
-   ```bash
+```bash
 pip install -r requirements.txt
 ```  
 4. **Run the server**  
-   ```bash
+```bash
 python app.py
 ```  
 5. **Browse the demos**  
